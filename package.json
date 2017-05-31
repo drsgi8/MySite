@@ -1,0 +1,19 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack-dev-server",
+    "build:min": "webpack-dev-server -p"
+  },
+  "author": "Dawid Rogowicz",
+  "license": "ISC",
+  "dependencies": {
+    "p5": "^0.5.10"
+  },
+  "devDependencies": {
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}

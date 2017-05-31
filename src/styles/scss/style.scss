@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+$lato: 'Lato', sans-serif;
+$color-teal: #00796B;
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 0;
+  color: white;
+}
+body {
+      background-image: url(../../assets/office-desktop.jpg);
+      background-attachment: fixed;
+  overflow-x: hidden;
+  #header-canvas-container {
+    width: 100%;
+    z-index: -10;
+  }
+  .nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  #nav_bar {
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    background-color: #222;
+    ul {
+      float: right;
+      li {
+      display: inline-block;
+      margin: 16px 0;
+        a {
+          padding: 16px 20px;
+          text-decoration: none;
+          font-family: 'Lato', sans-serif;
+          font-size: 20px;
+          &:hover{
+            background-color: $color-teal;
+          }
+        }
+      }
+    }
+  }
+  #about-me {
+    background-image: url(../../assets/code-desktop.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    .parallax {
+      min-height: 300px;
+    }
+    .article {
+      background: #333;
+      width: 50%;
+      font-size: 24px;
+    }
+  }
+  #my-projects {
+    @extend #about-me;
+    background-image: url(../../assets/design-desktop.jpg);
+  }
+  #contact {
+    @extend #about-me;
+    background-image: url(../../assets/mobile-desktop.jpg);
+  }
+  #something {
+    @extend #about-me;
+    background-image: url(../../assets/office-desktop.jpg);
+  }
+}

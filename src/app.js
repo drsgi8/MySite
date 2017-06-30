@@ -1,11 +1,12 @@
-import { navAttacher } from './scripts/nav';
-import '../node_modules/p5/lib/p5.min';
+import 'jquery';
+import 'p5';
+import './scripts/nav';
+import './scripts/header';
 import './style.scss';
+import './scripts/icons';
 
 $(function(){
 
   var windowHeight = $(window).innerHeight();
-  $('.parallax').css({'min-height': windowHeight/2+100});
-
-  navAttacher();
+  $('.inner-cell-container').css({'height': windowHeight});
 });

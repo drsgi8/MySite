@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=El+Messiri|Lato);
 $lato: 'Lato', sans-serif;
 $color-teal: #00796B;
+$color-gray: #222;
 
 * {
   padding: 0;
@@ -10,11 +11,14 @@ $color-teal: #00796B;
   color: white;
 }
 body {
-  background-color: #222;
+  background-color: $color-gray;
   overflow-x: hidden;
   #header-canvas-container {
     width: 100%;
     z-index: -10;
+    @media only screen and (max-width: 1400px) {
+      display: none;
+    }
   }
   .inv{
     display: none;
@@ -30,19 +34,51 @@ body {
     width: 100%;
     height: 60px;
     display: inline-block;
-    background-color: #222;
-    ul {
-      float: right;
-      li {
-      display: inline-block;
-      margin: 16px 0;
-        a {
-          padding: 20px 28px;
-          text-decoration: none;
-          font-family: 'Lato', sans-serif;
-          font-size: 20px;
-          &:hover{
-            background-color: $color-teal;
+    background-color: $color-gray;
+    div {
+      height: 100%;
+      #button {
+        display: none;
+        float: right;
+        box-sizing: border-box;
+        padding: 20px 28px;
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        background-color: $color-gray;
+        @media only screen and (max-width: 900px){
+          display: block;
+        }
+        &:hover{
+          background-color: $color-teal;
+          cursor: pointer;
+        }
+      }
+      ul {
+        float: right;
+        @media only screen and (max-width: 900px) {
+          display: none;
+          width: 80%;
+          margin: 0 auto;
+        }
+        li {
+          display: inline-block;
+          margin: 16px 0;
+          @media only screen and (max-width: 900px){
+            margin: 0;
+            display: block;
+          }
+          a {
+            background: $color-gray;
+            padding: 20px 28px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            @media only screen and (max-width: 900px) {
+              display: block;
+            }
+            &:hover{
+              background-color: $color-teal;
+            }
           }
         }
       }
@@ -115,4 +151,7 @@ footer {
     font-family: 'Lato', sans-serif;
     text-align: center;
   }
+}
+.show{
+  display: block;
 }

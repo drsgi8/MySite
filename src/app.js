@@ -4,6 +4,7 @@ import './scripts/nav';
 import './scripts/header';
 import './style.scss';
 import './scripts/icons';
+import './scripts/google-analytics';
 
 $(function(){
 
